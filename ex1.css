@@ -1,0 +1,21 @@
+body{
+    margin:0  /*no need to write */
+    
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 25%;
+    height: 20%;
+    flex-grow: 1;
+    background-color: #DDE8FA;
+    margin: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

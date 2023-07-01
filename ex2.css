@@ -1,0 +1,79 @@
+body{
+    margin:0
+}
+
+.firstLayer-body{
+    display:flex;
+    color:grey;
+    padding:10px;   
+}
+
+.firstLayerLeft{
+    flex:1;
+}
+
+.firstLayerRight{
+    color: rgba(0, 170, 255, 0.883);
+}
+
+.secondLayer{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+.crossNCircleChoice{
+    width:30%;
+    height:auto;
+    border: solid 2px gray;
+    margin:2px;
+    padding:6px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.left{
+    flex:1;
+}
+
+.thirdLayer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top:5px;
+}
+
+.fourthLayer{
+    background-color: #58B9AB;
+    height: 75vh;
+    width: 100%;
+    padding: 10px;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin:0 auto;
+    
+  }
+  
+  td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    
+  }
+
+  .trOne{
+    border-bottom: 5px solid grey;   
+  }
+
+  #one{
+    border-right: 5px solid grey;
+  }
+
+  .fifthLayer{
+    color: #58B9AB;
+    text-align: center;
+    padding:0.5rem;
+  }

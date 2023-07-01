@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            --color: #58B9AB;
+        }
+
+        .card {
+            width: 100%;
+            border: 1px solid #D0D1D3;
+            border-radius: 0.5rem;
+        }
+
+        button {
+            background-color: white;
+            border: white;
+            font-style: italic;
+            color: gray;
+        }
+
+        .player-choices{
+            justify-content: center;
+            display: flex;
+            gap:0.5rem;
+            
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border: 1px solid grey;
+            width:30vw;
+            height: auto;
+        }
+        .body {
+            background-color: var(--color);
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+
+
+        .line {
+            background-color: #4A9E91;
+            width: 5px;
+            height: auto;
+        }
+        .h-line{
+            background-color: #4A9E91;
+            width: auto;
+            height: 5px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .box {
+            --size: 80px;
+            width: var(--size);
+            height: var(--size);
+
+            background-color: var(--color);
+            margin: 0.5rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        .restart-game-container {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        #restart-game {
+            color: var(--color);
+            font-style: normal;
+            font-weight: bold;
+            font-size: medium;
+            text-transform: uppercase;
+        }
+
+        .feedback-container {
+            display: flex;
+            justify-content: end;
+            padding-right: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="top-menu">
+
+            </div>
+            <div class="player-choices">
+                <div class="container left">
+                    <div class="cross">x</div>
+                    <div class="hypen">-</div>
+                </div>
+                <div class="container right">
+                    <div class="cross">o</div>
+                    <div class="hypen">-</div>
+                </div>
+            </div>
+            <div class="turn">X Turn</div>
+        </div>
+
+        <div class="body">
+            <div class="nine-square-container">
+
+                <div class="row">
+                    <div class="box">X</div>
+                    <div class="line"></div>
+                    <div class="box"></div>
+                    <div class="line"></div>
+                    <div class="box"></div>
+                </div>
+
+                <div class="h-line"></div>
+
+                <div class="row">
+                    <div class="box"></div>
+                    <div class="line"></div>
+                    <div class="box"></div>
+                    <div class="line"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="h-line"></div>
+                <div class="row">
+                    <div class="box"></div>
+                    <div class="line"></div>
+                    <div class="box">O</div>
+                    <div class="line"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+        </div>
+        <div class="restart-game-container">
+            <button id="restart-game">restart game</button>
+        </div>
+    </div>
+    <div class="feedback-container">
+        <button id="feedback">Feedback</button>
+    </div>
+
+</body>
+
+</html>
