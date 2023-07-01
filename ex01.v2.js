@@ -57,4 +57,63 @@ const data = [
     },
   ];
 
-// 1. create infinite loop 2.forget jor
+
+// console.log(data[0]["currencies"][0]["code"])
+
+let country = data[0]; //remove array layer, jump to object layer
+
+for (let key in country) {
+  let value = `${key}: ${country[key]}`
+    if (value.includes('[object Object]')) {
+      // console.log(`${key}: special cases`)
+      for (let list of value) {
+        console.log(`${list}: ${value[list]}`) // how to loop array outside??
+      }
+    } else {
+      console.log(`${key}: ${country[key]}`)
+    }
+}
+
+
+
+/*
+for (let key in country) {
+  // console.log(`${key}: ${country[key]}`) //but show [object Object] in value
+  console.log(`${key}: ${country[key]}`)
+  let value = `${country[key]}`
+  // console.log(value)
+
+  // condition = value.includes('[object Object]')
+  if (value.includes('[object Object]')){
+    for (let subKey of value ) { //try to solve array problem first
+    console.log(`${subKey}:${value[subKey]}`)}
+    /*
+    for (let subKey in value) {
+      console.log(`${value[subKey]}`)
+    }
+    */
+  // }}
+
+  
+  /*
+  let specialCases = country[key]
+  if (specialCases.includes('[object Object]')) {
+   console.log(`special cases: `)}
+  
+}
+*/
+
+/*
+for (let key in country) {
+  console.log(`${key}: ${country[key]}`);
+    if (country[key] == Array.isArray(data)){
+      function subKey(element) {
+        for (let subKey in country[key]) {
+          console.log(`${subKey}: ${country[key][subKey]}`);
+        }
+      }
+    }
+}
+*/
+
+
