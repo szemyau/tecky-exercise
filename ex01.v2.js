@@ -59,21 +59,57 @@ const data = [
 
 
 // console.log(data[0]["currencies"][0]["code"])
+//console.log(data[0]["currencies"])
 
-let country = data[0]; //remove array layer, jump to object layer
+let country = data[0]; //1. remove array layer, jump to object layer
 
-for (let key in country) {
-  let value = `${key}: ${country[key]}`
-    if (value.includes('[object Object]')) {
-      // console.log(`${key}: special cases`)
-      for (let list of value) {
-        console.log(`${list}: ${value[list]}`) // how to loop array outside??
-      }
-    } else {
-      console.log(`${key}: ${country[key]}`)
-    }
+
+function objectLoop(title, data) {
+  //4. here's object loop
+  
+  for (let key in data){
+    const value = data[key];
+    const message = `${title}_${key}:${value}`;
+    console.log(message)
+  }
 }
 
+
+for (let key in country) { //2. loop object layer to get value
+
+    const title = key[0].toUpperCase()+key.substring(1);
+    const value = country[key];
+    const message = `${title}:${value}`;
+
+  if (message.includes(`[object Object]`) ){  //3.focus on handling [object object]
+
+    if (Array.isArray(value)) {
+      for (let element of value) {
+        objectLoop(title,value);
+      }
+
+    } else {
+      objectLoop(title,value);
+    }
+  }
+  else{
+    console.log(message);
+  }
+}
+ 
+    
+
+
+/*
+let value = `${key}: ${country[key]}`
+if (value.includes('[object Object]')) {
+  // console.log(`${key}: special cases`)
+  for (let list of value) {
+    console.log(`${list}: ${value[list]}`) // how to loop array outside??
+  }
+} else {
+  console.log(`${key}: ${country[key]}`)}
+*
 
 
 /*
